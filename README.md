@@ -1,10 +1,10 @@
-# A blog demonstrating how you can add custom LinkedIn-like reactions to your blog posts with serverless Redis.
+# Fully functional Questions and Answers board built with Gatsby and serverless Redis
 
-<!-- ![image info](./img.jpg) -->
+![image info](./questionandanswers.png)
 
 <!-- This repo is a source code for my [article](https://dev.to/...) with a detailed explanation of how I used serverless Redis to create a Q&A board. -->
 
-You can see reactions in action on my website. Pick any post and you will find reactions at the bottom of the post. For instance, this [post](https://techforitrecruiters.com/blog/2021-05-11-what-is-a-full-stack-developer/)
+You can see this Q&A board in action [here](https://techforitrecruiters.com/questions)
 
 #### I use Netlify both for deployment and development
 
@@ -39,5 +39,3 @@ You can see reactions in action on my website. Pick any post and you will find r
 #### Redis
 
 - I use Serverless Redis from [Upstash](https://upstash.com?utm_source=sndr_1)
-
-Cloned from [Gatsby's blog starter](https://github.com/gatsbyjs/gatsby-starter-blog)
