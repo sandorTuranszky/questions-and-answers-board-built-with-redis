@@ -1,0 +1,27 @@
+[build]
+  publish = "public"
+  command = "yarn run build"
+  functions = "lambda"
+[build.environment]
+  YARN_VERSION = "1.9.4"
+  YARN_FLAGS = "--no-ignore-optional"
+[context.production]
+  environment = { NODE_ENV = "production" }
+[context.deploy-preview]
+  environment = { NODE_ENV = "development" }
+[context.branch-deploy]
+  environment = { NODE_ENV = "development" }  
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+  Cache-Control = "public, max-age=360000"
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = true
+  [redirects.headers]
+    X-From = "Netlify"
+    Access-Control-Allow-Origin = "*"
+[[plugins]]
+package = "netlify-plugin-inline-functions-env"
