@@ -34,6 +34,7 @@ module.exports.handler = catchEvents(async (event, _context, callback) => {
       .multi()
       .hset(getQuestionKey(id), 'url', url)
       .zadd(getAnsweredQuestionsKey(boardID), score, id)
+      .zrem(getQuestionsKey(boardID), id)
       .exec();
 
     return callback(null, successResponse(200, { status: 'ok' }));
