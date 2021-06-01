@@ -3,7 +3,8 @@
  *
  * 1. Get the score of a question
  * 2. Update the hash with the question adding the url value
- * 3. Add question ID to the "questions:${boardID}:answered" sorted set
+ * 3. Add the question ID to the "questions:${boardID}:answered" sorted set
+ * 4. Remove the question ID from the "questions:${boardID}" sorted set
  *
  */
 const Joi = require('joi');
