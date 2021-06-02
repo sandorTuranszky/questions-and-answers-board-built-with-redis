@@ -19,7 +19,7 @@ export default ({
         <div className="text-xs text-disabled-on-surface-0">{moment.unix(datetime).calendar()}</div>
       </div>
       <div className="w-2/12 text-right mr-2 md:mr-1 justify-end">
-        <VoteBtn id={id} vote={vote} voteHandler={voteHandler} active={active} />
+        <VoteBtn id={id} vote={vote} voteHandler={voteHandler} active={active} disabled={url}/>
       </div>
     </div>
 

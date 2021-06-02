@@ -15,6 +15,7 @@ const {
   getQuestionKey,
   getQuestionsKey,
   getAnsweredQuestionsKey,
+  getQuestionsByTimeKey,
   defaultBoardID,
 } = require('./helpers/qa');
 
@@ -36,6 +37,7 @@ module.exports.handler = catchEvents(async (event, _context, callback) => {
       .hset(getQuestionKey(id), 'url', url)
       .zadd(getAnsweredQuestionsKey(boardID), score, id)
       .zrem(getQuestionsKey(boardID), id)
+      .zrem(getQuestionsByTimeKey(boardID), id)
       .exec();
 
     return callback(null, successResponse(200, { status: 'ok' }));
