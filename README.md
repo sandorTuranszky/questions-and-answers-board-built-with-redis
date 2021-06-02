@@ -30,7 +30,7 @@ You can see this Q&A board in action [here](https://techforitrecruiters.com/ques
 
 #### Env variables
 
-- You need to have env. variables set for development/deployment:
+- You need to have env. variables set for development/deployment (for development, you need to keep the variables in `.env.development`):
   - REDIS_PORT=
   - REDIS_HOST=
   - REDIS_PASSWORD=
