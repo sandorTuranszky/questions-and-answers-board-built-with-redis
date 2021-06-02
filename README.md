@@ -2,7 +2,7 @@
 
 ![image info](./questionandanswers.png)
 
-<!-- This repo is a source code for my [article](https://dev.to/...) with a detailed explanation of how I used serverless Redis to create a Q&A board. -->
+This repo is a source code for my [article](https://dev.to/sandorturanszky/you-don-t-know-redis-3onh) with a detailed explanation of how I used Redis to create a Q&A board.
 
 You can see this Q&A board in action [here](https://techforitrecruiters.com/questions)
 
